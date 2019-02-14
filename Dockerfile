@@ -3,6 +3,7 @@ FROM node:8.7.0
 WORKDIR /usr/src/app
 ENV NODE_ENV production
 ENV PORT 9000
+ENV ALLOW_HTTP "true"
 EXPOSE 9000
 
 RUN apt-get update \
