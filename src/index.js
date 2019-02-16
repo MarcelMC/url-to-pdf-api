@@ -10,13 +10,7 @@ BPromise.config({
 });
 
 const app = createApp();
-const server = app.listen(config.PORT, () => {
-  logger.info(
-    'Express server listening on http://localhost:%d/ in %s mode',
-    config.PORT,
-    app.get('env')
-  );
-});
+const server = app.listen(config.PORT, '0.0.0.0');
 enableDestroy(server);
 
 function closeServer(signal) {
